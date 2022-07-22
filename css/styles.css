@@ -39,7 +39,7 @@ body {
   background-color: var(--white-color);
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid var(--border-header);
+  border-bottom: 1px solid var(--main-bcgrnd-color);
 }
 /* Удаляем подчеркивание в ссылках */
 .link {
@@ -159,14 +159,14 @@ body {
   width: 100%;
   height: 4px;
 
+  transform: scaleX(0%) translateY(1px);
+  transition: transform 250ms var(--transition-timing-function);
   border-radius: 2px;
   background-color: var(--button-color);
-  transform: scaleX(0%);
-  transition: transform 250ms var(--transition-timing-function);
 }
 
 .header-list .link:hover:after {
-  transform: scale(100%);
+  transform: scale(100%) translateY(1px);
 }
 
 .goto-list .contacts {
