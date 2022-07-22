@@ -11,6 +11,7 @@
   --border-header: #ececec;
   --social-network: #afb1b8;
   --social-network-rgba: rgba(255, 255, 255, 0.1);
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Глобальные стили в Body */
 body {
@@ -160,6 +161,12 @@ body {
 
   border-radius: 2px;
   background-color: var(--button-color);
+  transform: scaleX(0%);
+  transition: transform 250ms var(--transition-timing-function);
+}
+
+.header-list .link:hover:after {
+  transform: scale(100%);
 }
 
 .goto-list .contacts {
