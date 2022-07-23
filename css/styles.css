@@ -151,10 +151,28 @@ body {
 
 .header .studio,
 .header .portfolio {
+  position: relative;
   color: var(--button-color);
 }
 
-.header-list .link::after {
+.header .studio::after,
+.header .portfolio::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  content: "";
+
+  transform: translateY(1px);
+  border-radius: 2px;
+  background-color: var(--button-color);
+}
+
+/* Добавлена анимация подчеркивания ссылки  */
+/* .header-list .link::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -167,12 +185,12 @@ body {
   transition: transform 250ms var(--transition-timing-function);
   border-radius: 2px;
   background-color: var(--button-color);
-}
+} */
 
-.header-list .link:hover:after,
+/* .header-list .link:hover:after,
 .header-list .link:focus:after {
   transform: scale(100%) translateY(1px);
-}
+} */
 
 .goto-list .contacts {
   display: flex;
@@ -333,12 +351,40 @@ body {
   margin: 0;
 }
 
-.work .items-overlay {
-  display: block;
+.work .work-overlay {
+  position: relative;
+  display: flex;
+}
+
+.work .bottom-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
   width: 100%;
   height: 70px;
 
   background-color: var(--work-background-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.work .bottom-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+
+  min-width: 205px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 14px;
+  line-height: 1.1px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
 }
 
 /* Стили для секция команда */
