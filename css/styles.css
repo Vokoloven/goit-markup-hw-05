@@ -11,6 +11,7 @@
   --border-header: #ececec;
   --social-network: #afb1b8;
   --social-network-rgba: rgba(255, 255, 255, 0.1);
+  --work-background-color: rgba(47, 48, 58, 0.8);
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Глобальные стили в Body */
@@ -330,6 +331,14 @@ body {
 .work .img {
   display: block;
   margin: 0;
+}
+
+.work .items-overlay {
+  display: block;
+  width: 100%;
+  height: 70px;
+
+  background-color: var(--work-background-color);
 }
 
 /* Стили для секция команда */
