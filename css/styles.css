@@ -13,6 +13,7 @@
   --social-network-rgba: rgba(255, 255, 255, 0.1);
   --rgba-bcgrnd-color-for-work: rgba(47, 48, 58, 0.8);
   --rgba-bcgrnd-color-for-search: rgba(33, 150, 243, 0.9);
+  --rgba-backdrop-color: rgba(0, 0, 0, 0.2);
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Глобальные стили в Body */
@@ -854,4 +855,28 @@ body {
   line-height: 1.9;
   letter-spacing: 0.03em;
   color: var(--paragraph-color);
+}
+
+.backdrop {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--rgba-backdrop-color);
+}
+
+.modal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: var(--white-color);
 }
