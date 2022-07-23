@@ -867,6 +867,11 @@ body {
   background-color: var(--rgba-backdrop-color);
 }
 
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .modal {
   position: absolute;
 
